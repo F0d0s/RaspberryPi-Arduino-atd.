@@ -1,5 +1,4 @@
 # Arduino, Raspberry Pi, atd.
-### !! Bohužel nestíhám kvůli lyžařskému kurzu a nevlastním notebook, takže ještě budu dodělávat. !!
 ## Úvod
 Jak vypovídá název, budu Vám chtít něco říct o Arduinu, Raspberry Pi a dalších podobných věcech. Avšak na začátek bych chtěl upozornit na jednu věc.  
 
@@ -160,15 +159,31 @@ Arduino se také nevyhlo „klonům" a konkurentům. Existují také desky, kter
 
 ## Ukázky
 ### Hlavní projekt - FPV Laptimer
-!! Bohužel nedodělán, až dodělám doplním skripta !!  
+Jedná se o vývojovou desku ESP32, ke které je připojený displej a přijímací modul RX5808. Tento projekt má za úkol měřit čas ulétnutého kola FPV dronu pomocí hodnoty RSSI z přijímacího modulu, podle které můžu analyzovat vzdálenost dronu od přijímače a tím určit kdy prolétnul v +- nějakém bodě. Od tohoto budu určovat čas daných kol.  
+
+<p align="center">
+<img src="https://media.discordapp.net/attachments/1098263330684162202/1196725308682944645/PXL_20240105_155428122.MP.jpg?ex=65b8ac4b&is=65a6374b&hm=17db8fb4e1685fb4a6aa4eebda0c159589d750873643357e4eb6c7ad3d0d13d7&=&format=webp&width=832&height=626" alt="drawing" width="300" />  
+<p>
+
+**Projekt je však zatím v hodně rané části, takže tolik kódu nemám, ale prakticky se zatím jedná jenom o přijímání signálu na jednom kanále a měření hodnoty RSSI. Samozřejmě chci domyslet počítání času, co přesně se bude zobrazovat na tom malém displeji a pokud budu vše stíhat tak udělat i stránku, na kterou se budete moct dostat, když se například z mobilu připojíte na ESP32, které bude mít hotspot a pomocí této stránky ovládat celý timer.**  
+
+**!! Skripta podle toho potom řádně doplním o daný kód atd. !!**
 
 ### Klipper (Voron 0.2)
 Tato ukázka spočívá v ukázání, jak Raspberry Pi nacházející se v tiskárně u mě doma dokáže ovládat 3D tiskárnu a zároveň sprostředkovávat print server pro ní.  
 
 Přes interface Mainsail se přípojím do své tiskárny doma a začnu ji ovládat, popřípadě spustím tisk.  
 
+<p align="center">
+<img src="https://media.discordapp.net/attachments/1098263330684162202/1196725309676990545/PXL_20240105_125414212.MP.jpg?ex=65b8ac4b&is=65a6374b&hm=d7cadcff8e694ddae7c6d80dc30363205bcc9e8a25b576d58400152d006bc151&=&format=webp&width=471&height=626" alt="drawing" width="200" />  
+<p>
+
+**Tato ukázka pouze slouží jako příklad využití Raspberry Pi, nic z toho jsem nenaprogramoval, jediné co tak jsem pomáhal se sestavením této tiskárny (stavbou naší jednotky, ne celkově projektem) a následného nastavování, například kamery a také jsem tam vytvořil různá GCODE makra.**
+
 ### Čidla na chalupě
-!! Potřebuji se domluvit s otcem nemám přístup, nejspíš to ale vyjde !!  
+!! Potřebuji se domluvit s otcem, nemám přístup, nejspíš to ale vyjde !!  
+
+**V celku se jedná o propojení více ESP vývojových desek, které spolu komunikují a posílají svá data z čidel na Grafanu. Toto také slouží pouze jako ukázka, tato práce je mého otce.**
 
 ## Zdroje
 Raspberry Pi:  
